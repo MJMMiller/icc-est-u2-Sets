@@ -1,3 +1,4 @@
+import controllers.ContactoController;
 import controllers.Sets;
 
 public class App {
@@ -19,6 +20,8 @@ public class App {
         System.out.println("\n-- TreeSet con Comparador Invertido --------------------------------------");
         System.out.println("Elementos del TreeSet con Comparador - Longitud & Alfabeticamente Invertido:");
         runConstruirTreeSetConComparadorInvertido(sets);
+
+        ContactoController cC = new ContactoController();
     }
 
     public static void runHashSet(Sets sets){

@@ -2,11 +2,11 @@
 
 ## 📌 Información General
 
-- **Título:** Práctica de Uso de HashSet, LinkedHashSet y TreeSet
+- **Título:** Práctica de Uso de HashSet, LinkedHashSet, TreeSet y Comparadores Personalizados
 - **Asignatura:** Estructura de Datos
 - **Carrera:** Computación
 - **Estudiante:** Miller Mendez Mateo Josue
-- **Fecha:** 01 / 07 / 2025
+- **Fecha:** 02 / 07 / 2025
 - **Profesor:** Ing. Pablo Torres
 
 ---
@@ -16,20 +16,25 @@
 Este proyecto en Java implementa y demuestra el funcionamiento de las principales colecciones `Set`:  
 HashSet, LinkedHashSet y TreeSet, incluyendo el uso de comparadores personalizados.
 
-A través de ejemplos prácticos, se muestran las diferencias en el manejo del orden y la unicidad de los elementos para cada tipo de Set.
+Además, se agregan ejemplos de manejo de objetos personalizados (Contactos) y su ordenación usando diferentes estrategias de comparación.
 
 Incluye:
 
 - 🔗 **HashSet:** Almacena elementos únicos sin garantizar orden.
 - 🔗 **LinkedHashSet:** Almacena elementos únicos respetando el orden de inserción.
 - 🔗 **TreeSet:** Almacena elementos únicos de forma ordenada (natural o personalizada con Comparator).
-- 🔗 **Comparadores personalizados:** Se muestran ejemplos de orden por longitud y orden invertido.
+- 🔗 **Comparadores personalizados:** Ejemplos de orden por longitud y orden invertido para cadenas, y ordenamientos complejos para objetos `Contacto` (por apellido, nombre y teléfono).
+- 👤 **Contactos:** Ejemplo de uso de TreeSet para ordenar objetos personalizados con distintos criterios.
 
 ---
 
 ## 🧪 Estructura
 
-- `controllers/Sets.java`: Clase principal con métodos para construir y mostrar ejemplos de HashSet, LinkedHashSet y TreeSet (con y sin Comparator).
+- `controllers/Sets.java`: Métodos para construir y mostrar ejemplos de HashSet, LinkedHashSet y TreeSet (con y sin Comparator).
+- `controllers/ContactoController.java`: Controlador para mostrar el uso de TreeSet con objetos `Contacto` y comparadores personalizados.
+- `utils/ContactoComparator.java`: Comparador que ordena contactos por apellido y nombre.
+- `utils/ContactoComparatorConNumero.java`: Comparador que ordena contactos por apellido, nombre y teléfono (teléfono en orden descendente).
+- `models/Contacto.java`: Clase para representar contactos (nombre, apellido, teléfono) con métodos equals, hashCode y toString.
 - `App.java`: Punto de entrada que ejecuta los ejemplos y muestra resultados en consola.
 
 ---
@@ -55,7 +60,7 @@ Para ejecutar el proyecto:
 Nombre: Mateo Miller
 
 -- Hash Set --------------------------------------
-Elementos del HashSet (No se garantiza orden): 
+Elementos del HashSet (No se garantiza orden):
 Laptop
 Pera
 Celular
@@ -90,10 +95,19 @@ Celulas
 Celular
 Laptop
 Pera
+
+Contactos orden alfabetico (apellido - nombre):
+Pedro Gonzales - 123456789
+Pedro Lopez - 222222222
+Ana Perez - 987654321
+Luis Perez - 111111111
+
+Contactos orden alfabetico (apellido - nombre - telefono(des) ):
+Pedro Gonzales - 123456789
+Pedro Lopez - 222222222
+Pedro Lopez - 123456789
+Ana Perez - 987654321
+Luis Perez - 111111111
 ```
 
 ---
-
-## 🧑‍💻 Ejemplo de Salida Visual
-
-![alt text](image.png)
