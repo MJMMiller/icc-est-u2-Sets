@@ -1,4 +1,5 @@
 import controllers.ContactoController;
+import controllers.Ejercicios;
 import controllers.Sets;
 
 public class App {
@@ -22,6 +23,7 @@ public class App {
         runConstruirTreeSetConComparadorInvertido(sets);
 
         ContactoController cC = new ContactoController();
+        Ejercicios e = new Ejercicios();
     }
 
     public static void runHashSet(Sets sets){
